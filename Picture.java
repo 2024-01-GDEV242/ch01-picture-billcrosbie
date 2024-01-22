@@ -6,7 +6,7 @@
  *
  * This class was written as an early example for teaching Java with BlueJ.
  * 
- * @author  Michael Kšlling and David J. Barnes
+ * @author Bill Crosbie
  * @version 2016.02.29
  */
 public class Picture
@@ -15,6 +15,7 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Circle sun2;
     private boolean drawn;
 
     /**
@@ -26,6 +27,7 @@ public class Picture
         window = new Square();
         roof = new Triangle();  
         sun = new Circle();
+        sun2 = new Circle();
         drawn = false;
     }
 
@@ -35,6 +37,8 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
+            sun2.makeVisible();
+            
             wall.moveHorizontal(-140);
             wall.moveVertical(20);
             wall.changeSize(120);
