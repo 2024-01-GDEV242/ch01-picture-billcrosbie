@@ -16,6 +16,8 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Circle sun2;
+    private Person luke;
+    
     private boolean drawn;
 
     /**
@@ -28,6 +30,7 @@ public class Picture
         roof = new Triangle();  
         sun = new Circle();
         sun2 = new Circle();
+        luke = new Person();
         drawn = false;
     }
 
@@ -43,6 +46,8 @@ public class Picture
             wall.moveVertical(20);
             wall.changeSize(120);
             wall.makeVisible();
+            
+            luke.makeVisible();
             
             window.changeColor("black");
             window.moveHorizontal(-120);
@@ -60,6 +65,9 @@ public class Picture
             sun.moveVertical(-40);
             sun.changeSize(80);
             sun.makeVisible();
+            
+            luke.slowMoveVertical(400);
+            
             drawn = true;
         }
     }
